@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  postgres:
+    container_name: plantation-db
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    image: postgres:9.4
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    expose:
+      - 5432
+    restart: unless-stopped
