@@ -8,3 +8,4 @@
  >**Database:** Start local database in project path: docker-compose up -d
 >
 >m 1
+>m 2
